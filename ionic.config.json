@@ -1,0 +1,7 @@
+{
+  "name": "elBackEndNoFunciona",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
