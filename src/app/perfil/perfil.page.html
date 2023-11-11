@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">perfil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card *ngIf="usuarioActivo" >
+    <img [src]="usuarioActivo.image">
+    <ion-card-content>
+      <ion-item>
+        <ion-text> {{ usuarioActivo.gender }}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-text>
+          {{ usuarioActivo.firstName }} {{ usuarioActivo.lastName }}
+        </ion-text>
+        <ion-item>
+          <ion-text> {{ usuarioActivo.username }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-text> contacto</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-text> {{usuarioActivo.email}}</ion-text>
+        </ion-item>
+      </ion-item>
+
+    </ion-card-content>
+    <ion-card-content>
+      <ion-button expand="block" routerLink="/productos" color="secondary">Productos</ion-button>
+      <ion-button expand="block" color="danger">Salir</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

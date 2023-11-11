@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">producto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list *ngIf="proS.productos">
+    <ion-item *ngFor="let p of proS.productos">
+      <img  [src]="p.images[0]">
+      <ion-label>{{ p.title}}</ion-label>
+      <ion-text> {{ p.stock }} </ion-text>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="proS.consultarProductos()" >Mas productos</ion-button>
+</ion-content>
